@@ -12,5 +12,6 @@ probe_rs = use_extension("@rules_probe_rs//probe_rs:extensions.bzl", "probe_rs")
 probe_rs.tools(
     name = "probe_rs",
     version = "0.24.0",
+    archives = ":versions.json",
 )
 use_repo(probe_rs, "probe_rs")
