@@ -21,6 +21,6 @@ probe_rs = use_extension(
 )
 probe_rs.tools(
     name = "probe_rs",
-    version = "0.24.0",
+    version = "0.27.0",
 )
 use_repo(probe_rs, "probe_rs")

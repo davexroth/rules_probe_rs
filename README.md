@@ -45,7 +45,7 @@ Official releases are available in the BCR, and also at
 bazel_dep(name = "rules_probe_rs", version = "<version>")
 
 probe_rs = use_extension("@rules_probe_rs//probe_rs:extensions.bzl", "probe_rs")
-probe_rs.tools(version = "0.24.0",)
+probe_rs.tools(version = "0.27.0",)
 use_repo(probe_rs, "probe_rs")
 ```
 
@@ -61,7 +61,7 @@ git_override(
 )
 
 probe_rs = use_extension("@rules_probe_rs//probe_rs:extensions.bzl", "probe_rs")
-probe_rs.tools(version = "0.24.0",)
+probe_rs.tools(version = "0.27.0",)
 use_repo(probe_rs, "probe_rs")
 ```
 
