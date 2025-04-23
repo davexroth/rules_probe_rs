@@ -92,7 +92,7 @@
   "moduleExtensions": {
     "//probe_rs:extensions.bzl%probe_rs": {
       "general": {
-        "bzlTransitiveDigest": "VMWWv2JVpukB9MqBqKNQhTt4U4FMaAHiiRtjxpJFVNc=",
+        "bzlTransitiveDigest": "DwHvfjqrtJL7YTfUN60VBBFrmiuxkNjdpokBgNtn5jI=",
         "usagesDigest": "+zWNccExTGGllo4g3lgjBd0d48zg3I7Ad74hDMzF4fQ=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},

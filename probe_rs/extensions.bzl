@@ -3,7 +3,6 @@
 load("@rules_probe_rs//probe_rs/private:repositories.bzl", "probe_rs_tools_repositories")
 
 _DEFAULT_NAME = "probe_rs"
-_DEFAULT_ARCHIVES_FILE = Label("//probe_rs/private:versions.json")
 
 probe_rs_tools = tag_class(attrs = {
     "name": attr.string(doc = "Base name for generated repositories", default = _DEFAULT_NAME),
@@ -42,12 +41,12 @@ def _probe_rs_extension(module_ctx):
         else:
             selected = versions[0]
 
+        archives = None
         archives_file = modules[selected].archives
-        if archives_file == None:
-            archives_file = _DEFAULT_ARCHIVES_FILE
+        if archives_file != None:
+            archives_json = module_ctx.read(archives_file)
+            archives = json.decode(archives_json)
 
-        archives_json = module_ctx.read(archives_file)
-        archives = json.decode(archives_json)
         probe_rs_tools_repositories(
             name = name,
             version = selected,
