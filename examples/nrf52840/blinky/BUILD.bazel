@@ -1,5 +1,5 @@
-load("@rules_rust//rust:defs.bzl", "rust_binary")
 load("@rules_probe_rs//probe_rs:defs.bzl", "probe_rs")
+load("@rules_rust//rust:defs.bzl", "rust_binary")
 
 platform(
     name = "nrf52840",
