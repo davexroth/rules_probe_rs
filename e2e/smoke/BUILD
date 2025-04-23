@@ -5,6 +5,8 @@ Add a basic smoke-test target below.
 load("@bazel_skylib//rules:build_test.bzl", "build_test")
 # load("@rules_probe_rs//probe_rs:defs.bzl", "...")
 
+exports_files(["versions.json"])
+
 # Replace with a usage of your rule/macro
 filegroup(name = "empty")
 
