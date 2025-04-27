@@ -1,0 +1,17 @@
+bazel_dep(name = "bazel_skylib", version = "1.7.1", dev_dependency = True)
+bazel_dep(name = "platforms", version = "0.0.11", dev_dependency = True)
+bazel_dep(name = "rules_probe_rs", version = "0.0.0", dev_dependency = True)
+
+bazel_dep(name = "rules_rust", version = "0.49.3")
+
+local_path_override(
+    module_name = "rules_probe_rs",
+    path = "../..",
+)
+
+probe_rs = use_extension("@rules_probe_rs//probe_rs:extensions.bzl", "probe_rs")
+probe_rs.tools(
+    name = "probe_rs",
+    version = "0.27.0",
+)
+use_repo(probe_rs, "probe_rs")
